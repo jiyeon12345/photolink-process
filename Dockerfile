@@ -1,4 +1,4 @@
-FROM openjdk:11-alpine
+FROM amazoncorretto:11
 
 RUN apk update
 
