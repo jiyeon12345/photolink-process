@@ -1,6 +1,6 @@
 FROM amazoncorretto:11
 
-RUN apk update
+RUN yum update -y
 
 ARG JAR_FILE=*.jar
 
