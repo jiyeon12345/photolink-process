@@ -16,11 +16,4 @@ public class CategoryCreateRequest {
 
     @NotBlank
     final private String categoryDesc;
-
-    public Category toCategory() {
-        return Category.builder()
-                .categoryTitle(this.categoryTitle)
-                .categoryDesc(this.categoryDesc)
-                .build();
-    }
 }
