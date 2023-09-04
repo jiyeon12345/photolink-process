@@ -1,6 +1,7 @@
 package com.example.demo.category.controller;
 
 import com.example.demo.category.dto.request.CategoryCreateRequest;
+import com.example.demo.category.dto.request.CategoryModifyeRequest;
 import com.example.demo.category.entity.Category;
 import com.example.demo.category.service.CategoryService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +17,7 @@ import javax.validation.Valid;
 public class CategoryController {
     private final CategoryService categoryService;
 
-    @PostMapping("/create")
+    @PostMapping()
     public ResponseEntity<Object> createCategory (@Valid @RequestBody CategoryCreateRequest createRequest) {
         categoryService.createCategory(createRequest);
 
@@ -27,4 +28,11 @@ public class CategoryController {
 //    public void getCategoryList () {
 //        log.info("test ok");
 //    }
+
+    @PutMapping()
+    public ResponseEntity<Object> modifyCategory (@Valid @RequestBody CategoryModifyeRequest modifyRequest) {
+        categoryService.modifyCategory(modifyRequest);
+
+        return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+    }
 }
