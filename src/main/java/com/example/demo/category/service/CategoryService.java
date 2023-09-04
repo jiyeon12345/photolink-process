@@ -24,6 +24,12 @@ public class CategoryService {
     public void modifyCategory(CategoryModifyeRequest modifyRequest) {
         categoryRepository.save(Category.update(modifyRequest));
     }
+    @Transactional
+    public void deleteCategory(String id) {
+        categoryRepository.deleteById(Long.valueOf(id));
+    }
+
+
 
     //select할때만 readOnly 추가
 }
