@@ -35,3 +35,15 @@ out/
 
 ### VS Code ###
 .vscode/
+
+.env
+
+amazon-linux-release
+
+build.gradle
+
+custom.cnf
+
+docker-compose.yml
+
+src/main/resources/
