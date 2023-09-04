@@ -1,6 +1,7 @@
 package com.example.demo.category.service;
 
 import com.example.demo.category.dto.request.CategoryCreateRequest;
+import com.example.demo.category.dto.request.CategoryModifyeRequest;
 import com.example.demo.category.entity.Category;
 import com.example.demo.category.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +18,11 @@ public class CategoryService {
     @Transactional
     public void createCategory(CategoryCreateRequest createRequest) {
         categoryRepository.save(Category.create(createRequest));
+    }
+
+    @Transactional
+    public void modifyCategory(CategoryModifyeRequest modifyRequest) {
+        categoryRepository.save(Category.update(modifyRequest));
     }
 
     //select할때만 readOnly 추가
