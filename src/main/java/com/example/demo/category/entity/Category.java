@@ -2,6 +2,7 @@ package com.example.demo.category.entity;
 
 import com.example.demo.category.dto.request.CategoryCreateRequest;
 import com.example.demo.category.dto.request.CategoryModifyeRequest;
+import com.example.demo.common.BaseEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,7 @@ import static lombok.AccessLevel.PROTECTED;
 @Table(name="category")
 @Getter
 @NoArgsConstructor(access = PROTECTED)
-public class Category {
+public class Category extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
