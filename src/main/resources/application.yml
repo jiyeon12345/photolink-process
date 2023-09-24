@@ -6,4 +6,22 @@ spring:
     multipart:
       max-file-size: 20MB
       max-request-size: 20MB
+  h2:
+    console:
+      enabled: true
 
+  datasource:
+    url: jdbc:h2:mem:~/photolink
+    driver-class-name: org.h2.Driver
+    username: photolink
+    password: photolink@2727!
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    repositories:
+      enabled: true
